@@ -27,7 +27,6 @@ function checkAge($age,$movies)
     $count=1;
     foreach($movies as $movie)
     {
-        $age = +$age;
         if ($age >= $movie['age_restriction'])
         {
             printMessage($count++  . formatTodo($movie));
