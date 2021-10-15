@@ -1,35 +1,42 @@
 <?php
 require "movies (1).php";
-function checkAge($movies)
+function checkInput($movies)
 {
-    $r_age=readline();
-    if (is_numeric($r_age))
+    $age=readline();
+    if (!is_numeric($age))
     {
-        if ((intval($r_age) == $r_age) && ($r_age >= 0))
+        echo "Not numeric!";
+        return False;
+    }
+    else
+    {
+        $age = +$age;
+        if (is_int($age) && ($age >= 0))
         {
-            $count=0;
-            foreach($movies as $movie)
-            {
-
-                if ($r_age >= $movie['age_restriction'])
-                {
-                    printMessage($count++  . formatTodo($movie));
-                }
-            }
+            checkAge($age,$movies);
         }
         else
         {
             echo "Not negative/float number!";
+            return False;
         }
     }
-    else
+}
+function checkAge($age,$movies)
+{
+    $count=1;
+    foreach($movies as $movie)
     {
-        echo "Not numeric!";
+        $age = +$age;
+        if ($age >= $movie['age_restriction'])
+        {
+            printMessage($count++  . formatTodo($movie));
+        }
     }
 }
 function formatTodo(array $movie): string
 {
-    return ". {$movie['title']} ({$movie['release_year']}), {$movie['age_restriction']}+, Rating-{$movie['rating']}";
+    return ". {$movie['title']} ({$movie['release_year']}), {$movie['age_restriction']}+, Rating - {$movie['rating']}";
 }
 function printMessage(string $message): void
 {
@@ -38,7 +45,7 @@ function printMessage(string $message): void
 
 
 }
-checkAge($movies);
+checkInput($movies);
 
 
 
