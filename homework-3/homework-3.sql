@@ -3,7 +3,7 @@ CREATE TABLE language
     ID int not null auto_increment,
     NAME VARCHAR(100) NOT NULL,
     PRIMARY KEY (ID)
-)
+);
 
 CREATE TABLE movie_title
 (
@@ -19,7 +19,7 @@ CREATE TABLE movie_title
         REFERENCES language(ID)
         ON UPDATE RESTRICT
         ON DELETE RESTRICT
-)
+);
 
 INSERT INTO language (ID, NAME)
 VALUES (1, 'RU'),
