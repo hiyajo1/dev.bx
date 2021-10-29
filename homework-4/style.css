@@ -80,7 +80,7 @@ body{
     border-bottom: 1px solid rgba(242,242,242, .1);
 }
 .menu-item:hover{
-    background:#52ea91;
+    background:#404040;
 }
 .menu-item:last-child{
     border-bottom: none;
@@ -111,7 +111,7 @@ body{
     align-items: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    background:#52ea91;
+    background:#404040;
 }
 
 li {
@@ -119,5 +119,5 @@ li {
     list-style-type: none;
 }
 li:active{
-    background:#52ea91;
+    background:#404040;
 }
