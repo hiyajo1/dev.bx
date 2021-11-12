@@ -82,6 +82,18 @@
 
 }
 
+.info-content-divider
+{
+	display: flex;
+	width: 1112px;
+	height: 1px;
+	right: 61px;
+	top: calc(50% - 1px/2 - 509px);
+
+	background: #CCCCCC;
+}
+
+
 .info-content-main
 {
 	display: flex;

@@ -1,17 +1,15 @@
 <!--#./resources/block/_movie_card.php
---><?php
-$hours = floor($movie['duration'] / 60);
-$minutes = $movie['duration'] % 60;
+-->
+<?php
+/** @var int $hours */
+/** @var int $minutes */
+require "time.php";
 ?>
 <div class="content-entity">
 	<div class="content-gradient">
-		<form action="./movie-info.php?">
 			<div class="content-gradient-button">
-				<input type="submit" name="movie" id="sat" value="<?=$movie['id']?>" style="height: 56px;width: 220px;padding-top: 10px;opacity:0%;position: absolute" >
-				Подробнее
-			</div>
-		</form>
-
+                <a class="movie-list-item-more" href="<?="movie-info.php?movie=" . $movie['id']?>"> Подробнее</a>
+            </div>
 	</div>
 	<div class="content-entity-image">
 		<img src="./resources/images/movie_images/<?=$movie['id']?>.jpg" alt="Фильм">

@@ -15,5 +15,8 @@ $page = renderTemplate("../resources/pages/add.php", [
 
 renderLayout($page, [
 	'config' => $page_config,
-	'genres'=> $genres
+	'genres'=> $genres,
+    'homeId' => $page_config['menu']['home'],
+    'favoriteId' =>$page_config['menu']['favorite']
+
 ]);
