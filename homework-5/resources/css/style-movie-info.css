@@ -5,7 +5,6 @@
 .info-content
 {
 	display: flex;
-	height: 1000px;
 	width: 1270px;
 	margin: 40px 51px 494px 44px;
 	flex-direction: column;
@@ -13,7 +12,6 @@
 	align-items: flex-start;
 	overflow: hidden;
 	background: #fff;
-
 }
 
 .info-content-name
