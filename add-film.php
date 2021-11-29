@@ -1,0 +1,15 @@
+<?php
+
+
+require "lib/template-function.php";
+require "config/config.php";
+require "lib/movie-list-function.php";
+require_once "lib/db-function.php";
+
+
+$templateContent = "";
+
+$db = dbConnection($sqlConnect);
+
+
+renderLayout($templateContent, getGenresList($db), $sideBarMenu, "array_key_first($_GET)");
