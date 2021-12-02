@@ -161,8 +161,7 @@ function getMoviesQuery(mysqli $database,string $filterQuery){
             JOIN director d ON d.ID = m.DIRECTOR_ID
             JOIN movie_genre mg on m.ID = mg.MOVIE_ID
             JOIN genre g on g.ID = mg.GENRE_ID
-             {$filterQuery}
-            GROUP BY m.ID, TITLE, ORIGINAL_TITLE, DESCRIPTION, DURATION, AGE_RESTRICTION, RELEASE_DATE, RATING, d.NAME"
+             {$filterQuery}"
     );
     return $result;
 }
